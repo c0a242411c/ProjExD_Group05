@@ -247,14 +247,14 @@ class ClearScreen:
     """
     ゴールの旗に着いた時にゴールの画面を表示するクラス
     """
-    def __init__(self, bg_img, font):
+    def __init__(self, bg_img: pg.Surface, font: pg.font.Font) -> None:
         """
         screen : pg.Surface描画対象となる画面
         """
         self.bg_img = bg_img
         self.font = font
 
-    def draw(self, screen):
+    def draw(self, screen: pg.Surface) -> None:
         # 背景
         screen.blit(self.bg_img, (0, 0))
 
@@ -289,7 +289,7 @@ class GameOverScreen:
     """
     段差に当たった時や穴に落ちたときにゲームオーバーを表示させるクラス
     """
-    def __init__(self, bg_img, font):
+    def __init__(self, bg_img: pg.Surface, font: pg.font.Font) -> None:
         """
         bg_img : ゲームオーバー画面の背景画像
         font : 文字描画に使用するフォント
@@ -297,7 +297,7 @@ class GameOverScreen:
         self.bg_img = bg_img
         self.font = font
 
-    def draw(self, screen):
+    def draw(self, screen: pg.Surface) -> None:
         # 背景
         screen.blit(self.bg_img, (0, 0))
 
